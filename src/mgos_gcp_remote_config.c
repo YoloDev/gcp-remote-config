@@ -70,8 +70,8 @@ bool mgos_gcp_remote_config_init(void) {
   }
 
   if (!mgos_sys_config_get_gcp_enable()) {
-    LOG(LL_ERROR, ("GCP remote config requires gcp.enable"));
-    return false;
+    LOG(LL_DEBUG, ("GCP remote config requires gcp.enable"));
+    return true;
   }
 
   const char *impl = mgos_sys_config_get_rcfg_lib();
