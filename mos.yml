@@ -1,0 +1,35 @@
+author: YoloDev
+type: lib
+description: A GCP remote config API
+version: 1.0
+
+# List of files / directories with C sources. No slashes at the end of dir names.
+sources:
+  - src
+
+# List of files / directories with C headers. No slashes at the end of dir names.
+includes:
+  - include
+
+# Optional. List of tags for online search.
+tags:
+  - c
+  - cloud
+  - config
+  - gcp
+
+# Custom configuration entries, settable via "device configuration"
+# Below is a custom firmware configuration example.
+# Uncomment and modify according to your needs:
+
+# config_schema:
+
+# Temporary, while root manifest change propagates (2018/03/29).
+libs:
+  - origin: https://github.com/mongoose-os-libs/core
+  - origin: https://github.com/mongoose-os-libs/gcp
+  - origin: https://github.com/YoloDev/remote-config
+    version: master
+
+# Used by the mos tool to catch mos binaries incompatible with this file format
+manifest_version: 2017-09-29
